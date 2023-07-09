@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explorar Marruecos es un viaje fascinante por una tierra de contrastes. Desde los bulliciosos mercados de Marrakech hasta las tranquilas arenas del desierto del Sáhara, este país norteafricano ofrece un rico tapiz de historia, cultura y belleza natural..." />
+    <title>Visita Marruecos</title>
+
+    <!-- font awesome cdn paginas  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!--para font-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" /> <!-- swiperjs.com is The Most Modern Mobile Touch Slider-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!--para la animacion-->
+
+    <!--mi css  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header -->
+
+    <header class="header">
+
+        <section class="flex">
+
+            <a href="#" class="logo"> <i class="fas fa-hiking"></i><span>Visita Marruecos</span></a>
+            <nav class="navbar">
+                <div id="nav-close" class="fas fa-times"></div>
+                <a href="index.html">Inicio</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="ofertas.html">Viajes Especiales</a>
+                <a href="reseñas.html">Reseñas</a>
+                <a href="blog.html">blog</a>
+            </nav>
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>  <!--La clase fas se refiere a los íconos Font Awesome y la segunda clase especifica el ícono exacto que se desea mostrar. -->
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <div id="search-btn" class="fas fa-search"></div>
+            </div>
+
+        </section>
+
+    </header>
+
+    <!-- searchform  -->
+
+    <div class="search-form">
+
+        <div id="close-search" class="fas fa-times"></div>
+
+        <form action="">
+            <input type="search" name="" placeholder="Busca aqui..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </div>
+
+    <!-- home inicio -->
+
+    <div class="home" id="home">
+
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide"
+                    style="background: url(/img/ssssaaahh.jpg) no-repeat; background-position: center; background-size: cover;">
+                    <!--background-size: cover se utiliza para establecer el tamaño de un fondo de imagen en relación al elemento contenedor, de tal manera que la imagen cubra todo el espacio disponible del contenedor, sin distorsionar la proporción original de la imagen.-->
+                    <section class="box">
+                        <div class="content">
+                            <span>Nunca te detengas</span>
+                            <h3>Descubre a Marruecos</h3>
+                            <p>Descubra Nuevos Lugares Con Nosotros, La Aventura Le Espera</p>
+                            <a href="#" class="btn animate__wobble">Empieza tu Viaje</a>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="swiper-slide"
+                    style="background: url(/img/8.jpg) no-repeat; background-position: center; background-size: cover;">
+                    <section class="box second">
+                        <div class="content">
+                            <span>haz</span>
+                            <h3>que tu viaje sea increíble</h3>
+                            <p>Nos ocupamos de viajes culturas y en familias!</p>
+                            <a href="#" class="btn animate__wobble">Empieza tu Viaje</a>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="swiper-slide"
+                    style="background: url(/img/tercerslider.jpg) no-repeat; background-position: center; background-size: cover;">
+                    <section class="box">
+                        <div class="content">
+                            <span>Explora el</span>
+                            <h3>Nuevo Mundo</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde ex molestias soluta
+                                consequatur saepe aliquam, excepturi delectus consequuntur minus!</p>
+                            <a href="#" class="btn animate__wobble">Empieza tu Viaje</a>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div> <!-- es una clase CSS que se utiliza junto con la biblioteca de JavaScript Swiper.js para implementar botones de navegación en un slider o carrusel de imágenes.-->
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </div>
+
+    <!-- category 1  -->
+
+    <!-- reseñas  -->
+
+    <section class="reviews" id="reviews">
+
+        <h1 class="heading">Reseñas de nuestros clientes</h1>
+        <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quidem laborum
+                        pariatur alias, culpa illum quaerat, aliquid laboriosam voluptatem nisi repellat obcaecati,
+                        adipisci esse ab delectus dolorum ut recusandae ipsam?</p>
+                    <div class="user">
+                        <img src="images/pic-1.png" alt="">
+                        <div class="info">
+                            <h3>Mohamed Ali</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quidem laborum
+                        pariatur alias, culpa illum quaerat, aliquid laboriosam voluptatem nisi repellat obcaecati,
+                        adipisci esse ab delectus dolorum ut recusandae ipsam?</p>
+                    <div class="user">
+                        <img src="images/pic-2.png" alt="">
+                        <div class="info">
+                            <h3>Maria Fernandez</h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quidem laborum
+                        pariatur alias, culpa illum quaerat, aliquid laboriosam voluptatem nisi repellat obcaecati,
+                        adipisci esse ab delectus dolorum ut recusandae ipsam?</p>
+                    <div class="user">
+                        <img src="images/pic-3.png" alt="">
+                        <div class="info">
+                            <h3>Ahmed Naji</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- suscribe  -->
+
+    <div class="newsletter-container">
+
+        <section class="newsletter">
+
+            <div class="content">
+                <h1 class="heading">suscríbete ahora</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam ipsam repellat nostrum esse
+                    officiis unde quisquam corporis doloremque adipisci similique!</p>
+                <form action="">
+                    <input type="email" name="" placeholder="Correo electronico" id="" class="email">
+                    <input type="submit" value="suscríbete" class="btn">
+                </form>
+            </div>
+
+        </section>
+
+    </div>
+<!--------------------------------->
+    <section class="clients">
+        <div class="swiper clients-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide silde"><img src="images/client-logo-1.png" alt=""></div>
+                <div class="swiper-slide silde"><img src="images/client-logo-2.png" alt=""></div>
+                <div class="swiper-slide silde"><img src="images/client-logo-3.png" alt=""></div>
+                <div class="swiper-slide silde"><img src="images/client-logo-4.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section starts  -->
+
+    <footer class="footer">
+
+        <section class="grid">
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>enlaces directos</h3>
+                    <a href="index.html">Inicio</a>
+                    <a href="tienda.html">Tienda</a>
+                    <a href="ofertas.html">Viajes Especiales</a>
+                    <a href="reseñas.html">Reseñas</a>
+                    <a href="blog.html">blog</a>
+                </div>
+
+                <div class="box">
+                    <h3>enlaces adicionales</h3>
+                    <a href="#">Mi cuenta</a>
+                    <a href="#">Mi pedido</a>
+                    <a href="#">Mi lista de favoritos</a>
+                    <a href="#">preguntas frecuentes</a>
+                    <a href="#">condiciones de uso</a>
+                    <a href="#">política de privacidad</a>
+                </div>
+
+                <div class="box">
+                    <h3>contacto</h3>
+                    <a href="#"> <i class="fas fa-phone"></i> +34000000000 </a>
+                    <a href="#"> <i class="fas fa-phone"></i> +34000000000 </a>
+                    <a href="#"> <i class="fas fa-envelope"></i> visitmorocco@gmail.com </a>
+                    <a href="#"> <i class="fas fa-map"></i> Bilbao - 48002 </a>
+                </div>
+
+                <div class="box">
+                    <h3>síguenos</h3>
+                    <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                    <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                    <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                    <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                </div>
+
+            </div>
+
+            <div class="credit">creado por <span>Oumaima Erraji</span> |todos los derechos reservados</div>
+
+        </section>
+
+    </footer>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- es una URL que apunta a un archivo JavaScript llamado swiper-bundle.min.js que se encuentra alojado en la plataforma de alojamiento de paquetes npm llamada unpkg.com.-->
+<!--Swiper.js es una biblioteca de JavaScript que proporciona un conjunto completo de herramientas (igual que el bootstrap) para crear carruseles de imágenes responsivos y personalizables. swiper-bundle.min.js es un archivo JavaScript que contiene la versión minificada y empaquetada de la biblioteca Swiper.js.-->
+<!---La URL https://unpkg.com/swiper@7/swiper-bundle.min.js la uso para importar la biblioteca Swiper.js ---->
+
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

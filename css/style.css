@@ -1,0 +1,878 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* establece el modelo de caja a border-box para que el ancho y la altura incluyan el relleno y el borde. */
+  outline: none; /*  establece el borde exterior a ninguno. */
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize; /* establece la transformación del texto a capitalizar (la primera letra de cada palabra en mayúscula). */
+  transition: .2s linear; /* establece una transición de CSS con una duración de 0.2 segundos y una función de temporización lineal. */
+}
+
+html { /*  establece el tamaño de fuente a 62.5%, lo que significa que 1 rem será igual a 10 píxeles.*/
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /*  es una regla que se utiliza para ocultar el contenido que se desborda (likayfiiiiiid ) horizontalmente del elemento al que se le aplica esta regla. */
+  scroll-behavior: smooth; /* kaytel3 bchewiya */
+  /* es una regla que se utiliza para crear un efecto de desplazamiento suave y animado al navegar por una página web. Al aplicar esta regla, el desplazamiento de la página se animará en lugar de moverse instantáneamente. */
+  scroll-padding-top: 50px;
+  /* es una regla que se utiliza para agregar un relleno superior al área de desplazamiento de un elemento. Esto se logra aplicando un espacio en blanco adicional en la parte superior del elemento, lo que ayuda a evitar que el contenido se oculte detrás de una barra de navegación o de encabezado fijo.*/
+}
+
+html::scrollbar {
+  /* es una pseudo-clase CSS que se utiliza para aplicar estilos a la barra de desplazamiento de un elemento en navegadores que utilizan el motor de renderizado WebKit*/
+  width: 10px;
+  /*1rem= 16px*/
+}
+
+html::scrollbar-track {
+  /* la pista (barra de progreso) de la barra de desplazamiento, donde hay una barra gris encima de una barra blanca.*/
+  background: #fff;
+}
+
+html::scrollbar-thumb {
+  /*el tirador de desplazamiento arrastrable. */
+  background: #10221b;
+}
+
+section {
+  padding: 30px 20px;
+  /* la regla establece un relleno de 3rem (tres veces el tamaño de la fuente raíz) en la parte superior e inferior del elemento, y un relleno de 2rem (dos veces el tamaño de la fuente raíz) en los lados derecho e izquierdo del elemento. */
+  margin: 0 auto;
+  /* es una regla que se utiliza para centrar un elemento horizontalmente dentro de su contenedor. */
+  max-width: 1200px;
+}
+
+.btn {
+  margin-top: 10px;
+  display: inline-block;
+  border: 1px solid #10221b;
+  color: #f4f4f4;
+  cursor: pointer;
+  /*  es una regla que se utiliza para establecer el tipo de cursor que se mostrará cuando el usuario pase el ratón sobre un elemento. */
+  background: orange;
+  font-size: 16px;
+  padding: 10px 30px;
+  animation-duration: 2s;
+}
+
+
+.btn:hover {
+  background: #10221b;
+  color: #fff;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 40px;
+  color: #10221b;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  /* es una regla que se utiliza para establecer la posición de un elemento en el eje z (profundidad) en relación con otros elementos. */
+  /* un elemento con un valor de z-index más alto se superpondrá a otro elemento con un valor de z-index más bajo. 
+  si un elemento con z-index: 1000 se superpone a otro elemento con z-index: 500, el primer elemento se mostrará encima del segundo.*/
+}
+
+.header .flex {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  align-items: center;
+}
+
+.header.active { 
+  background: #000000;
+  box-shadow: 0 5px 10px rgba(232, 6, 6, 0.1);
+}
+
+.header .logo {
+  margin-right: auto; /* a tu aire señor browser */
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+.header .logo i {
+  color: #ff6601;
+}
+
+.header .navbar a {
+  margin-left: 20px;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.header .navbar a:hover {
+  color: #ff6601;
+}
+
+.header .navbar #nav-close {
+  font-size: 50px;
+  cursor: pointer;
+  color: #ffffff;
+  display: none;
+}
+
+.header .icons a,
+.header .icons div {
+  font-size: 25px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.header .icons a:hover,
+.header .icons div:hover {
+  color: #ff6601;
+}
+
+.header #menu-btn {
+  display: none;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  /* -ms-flex-pack es una propiedad que se utiliza para establecer la forma en que los elementos dentro de un contenedor flexible se distribuyen a lo largo del eje principal del contenedor en navegadores que utilizan el motor de renderizado de Microsoft (para navegadores como Internet Explorer). */
+  justify-content: center;
+  z-index: 10000;
+  transform: translateY(-110%);
+  transform: translateY(-110%);
+}
+
+.search-form.active {
+  transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.search-form #close-search {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 60px;
+}
+
+.search-form #close-search:hover {
+  color: #ff6601;
+}
+
+.search-form form {
+  width: 70rem;
+  margin: 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.search-form form input {
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  text-transform: none;
+  background: none;
+  padding-right: 20px;
+}
+
+/*es un pseudoelemento CSS que se utiliza para dar estilo al texto del marcador de posición de un campo de entrada o textarea en navegadores basados en webkit como Google Chrome y Safari. Permite cambiar el color, la fuente, el tamaño y otras propiedades del texto del marcador de posición.*/
+.search-form form input::input-placeholder {
+  color: #aaa;
+}
+
+/*Este pseudo-elemento sólo es compatible con el navegador Microsoft Edge y no es compatible con otros navegadores.*/
+.search-form form input:-ms-input-placeholder {
+  color: #aaa;
+}
+
+.search-form form input::-ms-input-placeholder {
+  color: #aaa;
+}
+
+.search-form form input::placeholder {
+  color: #aaa;
+}
+
+.search-form form label {
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.search-form form label:hover {
+  color: #ff6601;
+}
+
+.home .box {
+  min-height: 100vh; /* establece la altura mínima del elemento */
+  display: flex;
+  align-items: center;
+  box-pack: end; /* se utiliza en el modelo de caja flexible (flexbox) para alinear los elementos hijos (hijos directos) dentro del contenedor */
+  justify-content: flex-end;
+}
+
+.home .box.second {
+  box-pack: start;
+  /*start: aligns the child elements to the start of the main axis*/
+  justify-content: flex-start;
+}
+
+.home .box .content {
+  width: 50rem;
+
+}
+
+.home .box .content span {
+  font-size: 40px;
+  color: #ffffff;
+
+}
+
+.home .box .content h3 {
+  font-size: 60px;
+  color: #ff6601;
+  padding-top: 5px;
+  text-transform: uppercase;
+}
+
+.home .box .content p {
+  line-height: 2;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.category .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr)); /* establece que se deben crear tantas columnas como quepan en el ancho del contenedor, y que cada columna debe tener un ancho mínimo de 27rem y un ancho máximo de 1fr. */
+  gap: 15px; /* a propiedad gap se usa en CSS para definir el espacio entre las filas y columnas para un flexbox */
+}
+
+.category .box-container .box {
+  text-align: center;
+  padding: 10px;
+}
+
+.category .box-container .box img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.category .box-container .box h3 {
+  font-size: 20px;
+  color: #ff6601;
+}
+
+.category .box-container .box p {
+  font-size:16px;
+  color: #10221b;
+  padding: 10px 0;
+  line-height: 2;
+}
+
+
+/*  */
+.about-container {
+  background-color: #eee;
+}
+
+.about {
+  display: inline-block;
+  display: flex;
+  box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about .image {
+  box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.about .image img {
+  width: 100%;
+  box-shadow: 40px 40px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+.about .content {
+  box-flex: 1;
+  -ms-flex: 1 1 42rem;
+  flex: 1 1 42rem;
+}
+
+.about .content h3 {
+  font-size: 30px;
+  color: #ff6601;
+}
+
+.about .content p {
+  font-size: 15px;
+  color: #10221b;
+  padding: 10px 0;
+  line-height: 2;
+}
+
+/* TIENDA */
+.shop .slide {
+  border: 2px solid #10221b;
+}
+
+.shop .slide:hover .image .icons {
+  transform: translateY(0);
+  transform: translateY(0);
+}
+
+.shop .slide .image {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  width: 100%;
+}
+
+.shop .slide .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.shop .slide .image .icons {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  text-align: center;
+  z-index: 10;
+  transform: translateY(70px);
+  transform: translateY(70px);
+}
+
+.shop .slide .image .icons a {
+  height: 45px;
+  width: 45px;
+  line-height:45px;
+  font-size:17px;
+  background: #10221b;
+  color: #fff;
+  margin: 0 2px;
+}
+
+.shop .slide .image .icons a:hover {
+  background: #ff6601;
+}
+
+.shop .slide .content {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.shop .slide .content h3 {
+  font-size: 20px;
+  color: #10221b;
+}
+
+.shop .slide .content .price {
+  padding: 10px 0;
+  padding-top: 5px;
+  font-size: 20px;
+  color: #ff6601;
+}
+
+.shop .slide .content .stars i {
+  font-size: 17px;
+  color: #10221b;
+}
+
+.packages-container {
+  background: #eee;
+}
+
+/* Ofertas */
+.packages .box-container {
+  display: grid;
+  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 15px;
+}
+
+.packages .box-container .box {
+  text-align: center;
+  background: #fff;
+  border: 2px solid #10221b;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  animation-duration: 4s;
+}
+
+.packages .box-container .box:hover {
+  background: #10221b;
+}
+
+.packages .box-container .box:hover .content>* {
+  color: #fff;
+}
+
+.packages .box-container .box:hover .btn {
+  border-color: #fff;
+}
+
+.packages .box-container .box:hover .btn:hover {
+  background: #fff;
+  color: #10221b;
+}
+
+.packages .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  padding: 20px;
+  padding-bottom: 0;
+  border-radius: 5px;
+}
+
+.packages .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.packages .box-container .box .content {
+  padding: 20px;
+}
+
+.packages .box-container .box .content h3 {
+  font-size: 20px;
+  color: #10221b;
+}
+
+.packages .box-container .box .content p {
+  font-size: 15px;
+  color: #10221b;
+  padding: 10px 0;
+  line-height: 2;
+}
+
+.packages .box-container .box .content .price {
+  font-size: 20px;
+  color: #ff6601;
+}
+
+/* SERVICIOS */
+
+
+.services-container {
+  background: #eee;
+}
+
+.services .box-container {
+    display: grid;
+ /* auto-fit, indica que se debe ajustar automáticamente el número de columnas en función del ancho del contenedor que las contiene.*/
+ /* establece el tamaño mínimo y máximo que tendrán las columnas. En este caso, las columnas tendrán un tamaño mínimo de 31 rem y un tamaño máximo de 1 fr */
+ grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 15px;
+}
+
+.services .box-container .box {
+  text-align: center;
+  padding: 20px;
+  border: 2px solid #10221b;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.services .box-container .box:hover {
+  background: #10221b;
+}
+
+.services .box-container .box:hover img {
+  /* se utiliza en CSS para invertir los colores de un elemento. Cuando se aplica este filtro, los colores del elemento se invierten, lo que significa que los colores claros se vuelven oscuros y los oscuros se vuelven claros. El valor de "1" se utiliza para invertir completamente todos los colores, mientras que un valor menor invertiría solo una parte de ellos.*/
+  filter: invert(1);
+}
+
+.services .box-container .box:hover p {
+  color: #fff;
+}
+
+.services .box-container .box:hover .btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.services .box-container .box:hover .btn:hover {
+  background: #fff;
+  color: #10221b;
+}
+
+.services .box-container .box img {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.services .box-container .box h3 {
+  font-size: 20px;
+  color: #ff6601;
+}
+
+.services .box-container .box p {
+  font-size: 15px;
+  color: #10221b;
+  padding: 10px 0;
+  line-height: 2;
+}
+
+
+/* RESEÑAS */
+
+
+.reviews .slide .text {
+  padding: 20px;
+  font-size: 15px;
+  font-style: italic;
+  background: #eee;
+  border-radius: 5px;
+  color: #10221b;
+  line-height: 2;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 30px;
+}
+
+.reviews .slide .text::before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 7px;
+  height: 30px;
+  width: 30px;
+  background: #eee;
+
+}
+
+.reviews .slide .user {
+
+  display: flex;
+  box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.reviews .slide .user img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
+.reviews .slide .user h3 {
+  font-size: 20px;
+  color: #10221b;
+}
+
+.reviews .slide .user span {
+  color: #ff6601;
+  font-size: 15px;
+}
+
+/* BLOG */
+
+.blogs .slide {
+  text-align: center;
+  padding:20px;
+}
+
+.blogs .slide img {
+  height: 25rem;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.blogs .slide .icons {
+  background: #10221b;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+  top: -20px;
+  display: inline-block;
+}
+
+.blogs .slide .icons a {
+  font-size: 14px;
+  color: #fff;
+  margin: 0 10px;
+}
+
+.blogs .slide .icons a:hover {
+  color: #ff6601;
+}
+
+.blogs .slide .icons a i {
+  padding-right: 5px;
+  color: #ff6601;
+}
+
+.blogs .slide h3 {
+  font-size:20px;
+  color: #10221b;
+}
+
+.blogs .slide p {
+  font-size: 14px;
+  padding: 10px 0;
+  line-height: 2;
+  color: #10221b;
+}
+
+/* SUSCRIBE */
+
+.newsletter-container {
+  background: #eee;
+}
+
+.newsletter .content {
+  max-width: 700px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.newsletter .content p {
+  font-size: 15px;
+  line-height: 2;
+  color: #10221b;
+}
+
+.newsletter .content form {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 50px;
+  border: 2px solid #10221b;
+  padding: 7px;
+  display: flex;
+}
+
+.newsletter .content form .email {
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 16px;
+  color: #10221b;
+  padding: 0 13px;
+}
+
+.newsletter .content form .btn {
+  margin-top: 0;
+  border-radius: 50px;
+  background: #10221b;
+  color: #fff;
+}
+
+.newsletter .content form .btn:hover {
+  background: none;
+  color: #10221b;
+}
+
+
+/* IMAGENES DE CLIENTES AL FINAL DE LA PAGINA  */
+.clients .silde {
+  text-align: center;
+}
+
+.clients .silde img {
+  height: 120px;
+}
+
+/* FOOTER */
+
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(118, 3, 3, 0.5)), url(../img/imgfoot.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.footer .box-container {
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 15px;
+}
+
+.footer .box-container .box h3 {
+  font-size: 20px;
+  padding: 15px 0;
+  color: #fff;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.footer .box-container .box a i {
+  color: #ff6601;
+  padding-right: 5px;
+}
+
+.footer .box-container .box a:hover {
+  color: #ff6601;
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 20px;
+}
+
+.footer .credit {
+  border-top: 3px solid #fff;
+  text-align: center;
+  margin-top: 25px;
+  padding: 10px;
+  padding-top: 25px;
+  font-size: 20px;
+  color: #fff;
+  /* padding-bottom: 8rem; */
+}
+
+.footer .credit span {
+  color: #ff6601;
+}
+
+/* RESPONSIVE WEBSITE */
+@media (max-width: 991px) {
+
+  /* el ancho de la pantalla que no pase los 991px se le va a aplicar esto */
+  html {
+    font-size: 55%;
+    scroll-padding-top: 70px;
+  }
+
+  .home .box {
+    padding: 20px;
+    box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-position: right !important;
+  }
+
+  .home .box.second {
+    box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-position: left !important;
+  }
+
+  .home .box .content {
+    text-align: center;
+  }
+
+  .home .box .content span {
+    font-size: 30px;
+  }
+
+  .home .box .content h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header #menu-btn {
+    display: inline-block;
+  }
+
+  .header .navbar {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    background: #fff;
+    z-index: 10000; /*  establece la posición de apilamiento del elemento, en este caso por encima de otros elementos en la página que tengan un valor de z-index menor. */
+    width: 350px;
+    height: 100vh;
+    display: flex;
+    box-orient: vertical;
+    box-direction: normal;
+    flex-flow: column;
+    box-align: center;
+    align-items: center;
+    box-pack: center;
+    justify-content: center;
+  }
+
+  .header .navbar.active {
+    left: 0;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  }
+
+  .header .navbar a {
+    margin: 10px 0;
+    font-size: 30px;
+  }
+
+  .header .navbar #nav-close {
+    display: block;
+    position: absolute;
+    /* especifica cómo un elemento es posicionado en el documento (top, right,left,bottom) ,El posicionamiento absoluto se usa generalmente en elementos con nombre. No funciona en clases o tipos de elementos generales. */
+    top: 10px;
+    right: 20px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;  /* se usa mucho en javascript para ikhfa2 aw idhar chi 3onsor mnin kandghto 3la chi botton*/
+  }
+}
+
+@media (max-width: 450px) {
+
+  /* el ancho de pantala que no pase los 450px se la va a aplicar esto*/
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+}
